@@ -19,6 +19,6 @@ module.exports = App = React.createClass({
             <NotFound handler={ NotFoundPage } />
           </Pages>
         </html>
-    )
+    );
   }
 });

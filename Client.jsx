@@ -12,4 +12,3 @@ products.fetch().then(function () {
   console.log('fetched clientside');
   React.render(<App collection={ products }/>, document);
 });
-

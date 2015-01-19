@@ -6,15 +6,10 @@ module.exports = Index = React.createClass({
   },
 
   render: function() {
-    console.log(this.props.collection);
+    var key = 0;
     var data = this.props.collection.map(function (item) {
-      return <p key={ item.cid }>{ item.cid }</p>
+      return <p key={ key++ }>{ item.get('description')  }</p>
     });
-    return (
-        <div>
-        {data}
-        </div>
-
-    )
+    return ( <div> {data} </div> )
   }
 });
