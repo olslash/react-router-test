@@ -1,4 +1,5 @@
 var React = require('React');
+var Link = require('react-router-component').Link
 
 module.exports = Index = React.createClass({
   doClick: function() {
@@ -10,6 +11,10 @@ module.exports = Index = React.createClass({
     var data = this.props.collection.map(function (item) {
       return <p key={ key++ }>{ item.get('description')  }</p>
     });
-    return ( <div> {data} </div> )
+    return ( 
+      <div> 
+        <Link href="/test">Click Here</Link>
+        {data} 
+      </div> )
   }
 });
