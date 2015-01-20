@@ -8,6 +8,9 @@ var Page = Router.Page;
 var NotFound = Router.NotFound;
 
 module.exports = App = React.createClass({
+  testFunc: function() {
+    console.log('NAV FIRED')
+  },
 
   render: function () {
     return (
@@ -15,7 +18,7 @@ module.exports = App = React.createClass({
           <head>
             <script src="/bundle.js"></script>
           </head>
-          <Pages path={ this.props.path }>
+          <Pages path={ this.props.path } onBeforeNavigation={ this.testFunc }>
             <Page path="/" handler={ Index } collection={ this.props.collection }/>
             <Page path="/test" handler={ AnotherPage } collection={ this.props.collection }/>
             <NotFound handler={ NotFoundPage } />
